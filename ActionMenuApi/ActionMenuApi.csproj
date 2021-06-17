@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net472</TargetFramework>
+        <TargetFramework>net48</TargetFramework>
         <VrcReferences>true</VrcReferences>
         <Version>0.3.0.0</Version>
         <LangVersion>9</LangVersion>
@@ -8,7 +8,5 @@
     </PropertyGroup>
     <ItemGroup>
       <EmbeddedResource Include="actionmenuapi.icons" />
-      <EmbeddedResource Include="Stuff\_dummy_.dll" />
-      <EmbeddedResource Include="Stuff\_dummy2_.dll" />
     </ItemGroup>
 </Project>
