@@ -1,4 +1,6 @@
-﻿namespace ActionMenuApi
+﻿using MelonLoader;
+
+namespace ActionMenuApi
 {
     internal static class Logger
     {
