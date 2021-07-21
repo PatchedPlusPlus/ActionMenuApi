@@ -7,7 +7,7 @@ using MelonLoader;
 using UnhollowerRuntimeLib;
 using UnityEngine;
 
-[assembly: MelonInfo(typeof(ActionMenuTestMod.ActionMenuTestMod), "ActionMenuTestMod", "1.0.0", "gompo")]
+[assembly: MelonInfo(typeof(ActionMenuTestMod.ActionMenuTestMod), "ActionMenuTestMod", "1.0.0", "gompo, PatchedPlus+")]
 [assembly: MelonGame("VRChat", "VRChat")]
 
 namespace ActionMenuTestMod
@@ -31,7 +31,7 @@ namespace ActionMenuTestMod
         private static Texture2D radialIcon;
         private static Texture2D subMenuIcon;
         private static Texture2D buttonIcon;
-        
+
         public override void OnApplicationStart()
         {
             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ActionMenuTestMod.customicons"))
@@ -55,7 +55,7 @@ namespace ActionMenuTestMod
 
             PedalSubMenu subMenu = VRCActionMenuPage.AddSubMenu(ActionMenuPage.Config, "Toggle", () => { }, null, true);
             subMenu.locked = true;
-            
+
             AMUtils.AddToModsFolder(
                 "Test Stuff",
                 delegate
@@ -78,7 +78,7 @@ namespace ActionMenuTestMod
                 },
                 subMenuIcon
             );
-            
+
             AMUtils.AddToModsFolder(
                 "New Cube Stuff",
                 delegate
@@ -114,9 +114,9 @@ namespace ActionMenuTestMod
                 },
                 subMenuIcon
             );
-            for (int i = 0; i < 2; i++) //Set to a high number if you want to test the page functionality 
+            for (int i = 0; i < 2; i++) //Set to a high number if you want to test the page functionality
             {
-                AMAPI.AddModFolder($"Example Mod {i+2}", () => {}, subMenuIcon); 
+                AMAPI.AddModFolder($"Example Mod {i+2}", () => {}, subMenuIcon);
             }
         }
 
@@ -156,7 +156,7 @@ namespace ActionMenuTestMod
         {
             _controllingGameObject.transform.localPosition += new Vector3(v.x/25, 0, v.y/25);
         }
-        
+
         private static void RotateCubeX(float rotation)
         {
             //This is the incorrect way of rotating the gameobject and it breaks from 90-270 as quaternions and euler angle conversions are a bit fucky
@@ -164,7 +164,7 @@ namespace ActionMenuTestMod
             _controllingGameObject.transform.eulerAngles = new Vector3((rotation)*360, old.y, old.z);
             x = rotation;
         }
-        
+
         private static void RotateCubeY(float rotation)
         {
             Vector3 old = _controllingGameObject.transform.eulerAngles;
@@ -179,7 +179,7 @@ namespace ActionMenuTestMod
             _controllingGameObject.transform.eulerAngles = new Vector3(old.x, old.y, (rotation)*360);
             z = rotation;
         }
-        
+
         private static GameObject _controllingGameObject;
     }
 }
