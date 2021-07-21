@@ -5,7 +5,7 @@ using MelonLoader;
 
 #pragma warning disable 1591
 [assembly:
-    MelonInfo(typeof(ActionMenuApi.ActionMenuApi), "ActionMenuApi", "0.3.0", "gompo",
+    MelonInfo(typeof(ActionMenuApi.ActionMenuApi), "ActionMenuApi - Unchained", "0.3.0", "gompo, PatchedPlus+",
         "https://github.com/gompocp/ActionMenuApi/releases")]
 [assembly: MelonGame("VRChat", "VRChat")]
 [assembly: VerifyLoaderVersion(0, 4, 0, true)]
@@ -35,7 +35,7 @@ namespace ActionMenuApi
 
         private IEnumerator WaitForActionMenuInit()
         {
-            while (ActionMenuDriver.prop_ActionMenuDriver_0 == null) //VRCUIManager Init is too early 
+            while (ActionMenuDriver.prop_ActionMenuDriver_0 == null) //VRCUIManager Init is too early
                 yield return null;
             //if (!LoaderIntegrityCheck.passed && new Random().Next(6) == 0) yield break; // Must be your lucky day
             ResourcesManager.InitLockGameObject();
