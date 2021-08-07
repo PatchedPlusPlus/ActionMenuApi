@@ -5,7 +5,7 @@ using MelonLoader;
 
 #pragma warning disable 1591
 [assembly:
-    MelonInfo(typeof(ActionMenuApi.ActionMenuApi), "ActionMenuApi", "0.3.1", "gompo, PatchedPlus+",
+    MelonInfo(typeof(ActionMenuApi.ActionMenuApi), "ActionMenuApi", "0.3.3", "gompo, PatchedPlus+",
         "https://github.com/gompocp/ActionMenuApi/releases")]
 [assembly: MelonGame("VRChat", "VRChat")]
 //[assembly: VerifyLoaderVersion(0, 4, 3, true)]
